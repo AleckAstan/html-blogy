@@ -1,5 +1,8 @@
 /***Animation On Scroll init****/
 AOS.init();
+
+
+
 /********READ MORE function************ */
 
 
@@ -19,3 +22,17 @@ function readMore(article) {
         moreText.style.display = "inline";
     }
 }
+
+/*************SCROLL******** */
+var social = document.getElementById("social");
+window.onscroll = function() {
+    var d = document.documentElement;
+    var offset = d.scrollTop + window.innerHeight;
+    var height = d.offsetHeight;
+
+    if (offset >= height) {
+        social.style.display = "none";
+    } else {
+        social.style.display = "flex";
+    }
+};

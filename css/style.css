@@ -12,6 +12,12 @@
     --grey2: rgba(0, 0, 0, 0.877);
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 
@@ -58,6 +64,7 @@ body {
     margin: 0.6rem;
     padding: 0.5rem;
     z-index: 4;
+    transition: all 1s ease;
 }
 
 main .socialLink i {
@@ -296,10 +303,14 @@ main .header .background h3 {
 }
 
 .newsletter div .input {
+    width: 14rem;
     margin: 1rem 0;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border: solid 1px var(--white);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .newsletter div .btn {
