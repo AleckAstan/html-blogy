@@ -1,0 +1,354 @@
+@import url(fonts.css);
+:root {
+    --white: rgb(255, 255, 255);
+    --grey: rgb(41, 41, 41);
+    --lightGrey: rgb(145, 145, 145);
+    --dark: rgb(22, 22, 22);
+    --darkback: rgb(32, 32, 32);
+    /******GRADIENT*******/
+    --wbGradient: linear-gradient(to right, var(--white), var(--dark));
+    /***************SHADOW*******/
+    --shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    --grey2: rgba(0, 0, 0, 0.877);
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge add Firefox */
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+* {
+    font-family: Poppins;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.socialLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 25%;
+    margin: 0.6rem;
+    padding: 0.5rem;
+    z-index: 4;
+}
+
+main .socialLink i {
+    padding: 1rem 0.2rem;
+    color: var(--lightGrey);
+    transition: all 0.4s ease;
+}
+
+main .socialLink i:hover {
+    color: var(--white);
+    transform: scale(1.5);
+}
+
+
+/**-------------------Body------------------------------------------------*/
+
+main .header {
+    background: url(../assets/images/head.jpg);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .header .background {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    margin-top: 5vw;
+}
+
+main .header .background h3,
+main .header .background h5,
+main .header .background h1 {
+    color: var(--white);
+    margin: 0;
+    z-index: 3;
+}
+
+main .header .background h1 {
+    font-size: 13rem;
+}
+
+main .header .background h3 {
+    font-size: 2rem;
+}
+
+.content .background {
+    margin-top: -10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 90%;
+    background: var(--white);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 1rem 3rem;
+}
+
+.content {
+    background: linear-gradient( to left, rgb(168, 168, 168), rgba(0, 0, 0, 0.877));
+    display: flex;
+    justify-content: center;
+}
+
+
+/*********************ARTICLE*****************************/
+
+.article {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-radius: 0.3rem;
+}
+
+.blog .card>.article>img div {
+    overflow: hidden;
+}
+
+.article img {
+    margin-bottom: 1rem;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.article:hover img {
+    transform: scale(1.1);
+}
+
+.article .artDesc .title {
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+.article .artDesc .description {
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.article .btn,
+.newsletter .btn {
+    width: 9rem;
+    float: right;
+    background: transparent;
+    border: solid 1px var(--white);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.article .btn {
+    border: solid 1px var(--dark);
+    color: var(--dark);
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.article .btn:hover {
+    background: var(--dark);
+    color: var(--white);
+}
+
+
+/****************TOP*************************/
+
+.top {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem;
+    overflow: hidden;
+}
+
+.blog .top>.article>img div {
+    overflow: hidden;
+}
+
+.top img {
+    margin-bottom: 0.2rem;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.top:hover img {
+    transform: scale(1.1);
+}
+
+.top .artDesc .title {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.categories .catContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories .catContent>a {
+    padding: 0.5rem;
+    margin: 0.5rem 3rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 2rem;
+    background: var(--grey);
+    border: solid 1px var(--dark);
+    transition: all 0.4s ease;
+}
+
+.categories .catContent a:hover {
+    color: var(--grey);
+    background: transparent;
+}
+
+
+/*************READ MORE**************/
+
+.moreText {
+    display: none;
+}
+
+
+/*************FOOTER*****************/
+
+.footer {
+    margin: 0;
+    background: var(--grey2);
+    height: 100%;
+    padding: 1rem;
+}
+
+.footer .footerSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer .footerSection>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footerSection>div h1 {
+    color: var(--white);
+}
+
+.footer .footerSection .about .infos>p {
+    color: var(--white);
+}
+
+.contactLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactLink>a {
+    color: var(--white);
+    margin: 0.5rem;
+}
+
+.contactLink a>i {
+    color: var(--white);
+    margin: 0 1rem;
+}
+
+.newsletter div {
+    display: flex;
+    flex-direction: row;
+}
+
+.newsletter div .input {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.newsletter div .btn {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.newsletter div .btn:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+
+
+/*------------------------Responsive--------------------------------*/
+
+@media only screen and (max-width: 1080px) {
+    .nav .navMenu {
+        flex-direction: column;
+    }
+    .nav {
+        background: var(--darkback);
+        padding: 0 0.5rem;
+    }
+    .nav .navItems .navLink a {
+        color: var(--white);
+    }
+    main .header .background {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main .header .background h1 {
+        text-align: center;
+        font-size: 10rem;
+    }
+    .nav .logo a {
+        color: var(--white);
+    }
+    .content .background {
+        margin-top: -3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .content .background {
+        grid-template-columns: 100%;
+    }
+    .footer .footerSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
